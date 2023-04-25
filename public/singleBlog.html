@@ -1,0 +1,106 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <!-- Top Button -->
+        <div class="fixed bottom-3 right-3 md:bottom-5 md:right-5 bg-red-700 text-white rounded-md z-10">
+            <button class="p-1 xs:p-2 hidden" onclick="toTop()" id="ToTop">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+                  </svg>
+            </button>
+        </div>
+
+
+        <div class="fixed w-full bg-gray-300/40 backdrop-blur-md z-10">
+            <div class="p-1 bg-white w-9">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="pt-10">
+            <div class="bg-[url('../images/cambridge.JPG')] overflow-hidden relative bg-center bg-cover">
+                <div class=""></div>
+                <div class="md:h-80"></div>
+                <div class="relative px-4 md:px-16">
+                    <div class="pt-20 pb-14">
+                        <header>
+                            <h1 class="text-2xl md:text-6xl text-gray-200 py-3">This is Blog title</h1>
+                            <div class="inline-flex text-gray-200 px-2 md:px-5">
+                                <div class="mx-2 md:px-5 text-xl md:text-4xl">
+                                    <span>Date</span>
+                                </div>
+                                <div class="mx-2 md:px-5 text-xl md:text-4xl">
+                                    <span>Catagory</span>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="py-10 px-5 md:px-10">
+                <div>
+                    <span class="text-sm md:text-lg">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis voluptates accusantium labore. Nesciunt vitae facilis sapiente non accusantium nobis dolores, iure, voluptatibus expedita, cumque corrupti temporibus quaerat fuga eos? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur ipsam quidem quasi rem eos consequatur laborum dicta nam dignissimos deleniti, aspernatur fugiat. Rerum, voluptatum reprehenderit quia laborum aliquid sed tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est quam pariatur illum cumque voluptates dolorem aperiam, facilis excepturi iure eius quia temporibus laboriosam. Temporibus ratione in culpa deleniti nihil quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus magnam consequatur illo quia ratione deserunt, dolor soluta veritatis ipsum, modi quod itaque iste quasi. Adipisci esse hic quo unde!
+                    </span>
+                </div>
+            </div>
+                <!-- Contact Us -->
+                <div class="">
+                <div class="bg-primary border-b-2 text-white">
+                    <div class="block md:grid md:grid-cols-2">
+                        <div class="col-span-1 p-2 md:px-4 md:py-4">
+                            <div class="p-5 lg:p-10">
+                                <span class="text-sm md:text-lg">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-span-1 p-2 md:px-4 md:py-4">
+                            <div class="p-5 lg:p-10">
+                                <span class="text-sm md:text-lg">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-primary text-white">
+            <p style="text-align: center; font-size: 1.4rem;">M.S.T University</p>
+        </footer>
+    </div>
+
+</body>
+
+<script>
+    // Click To The Top
+  let TopButton = document.getElementById("ToTop");
+  window.onscroll = function() {scrolls()};
+
+  function scrolls() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      TopButton.style.display = "block";
+      } 
+  else {
+      TopButton.style.display = "none";
+      }
+  }
+  function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+</script>
+</html>

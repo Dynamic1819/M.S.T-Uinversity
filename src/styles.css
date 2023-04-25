@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Form for Uploading Blogs */
+
+.form{
+    @apply bg-[#15172b] p-5 h-[500px];
+}
+.title{
+    @apply text-3xl font-bold font-sans text-gray-200 mt-4;
+}
+.input-container{
+    @apply relative h-12 mt-10;
+}
+.input{
+    @apply bg-[#303245] rounded border-none text-gray-200 text-lg pt-5 w-full;
+}
+
+.placeholder{
+    @apply absolute text-[#65657b] font-sans left-5 top-5 ;
+}
+.submit{
+    @apply h-28 text-gray-200 cursor-pointer text-xl justify-center mt-9;
+}
+
+
+
+
+/* University photo in Home Page */
+.Uni{
+    @apply pl-3 font-bold text-2xl;
+}
+
+/* buttons */
+.moreButton{
+    @apply bg-red-600 rounded transition ease-out duration-150 hover:scale-105;
+}
+.buttonText{
+    @apply p-2 xs:p-3 text-[14px] xs:text-lg text-gray-100;
+}
+
+
+
+/* Font sizes for pages */
+.Headtext{
+    @apply text-2xl sm:text-3xl font-bold;
+}
+.subHeadtext{
+    @apply text-xl sm:text-2xl font-bold;
+}
+
+/* Navigation for every pages */
+.lists{
+    @apply px-5 py-2 text-gray-700 font-bold rounded-full hover:shadow-none hover:font-bold hover:bg-primary hover:text-gray-200 hover:scale-105 transition ease-out duration-200;
+    box-shadow: 2px 2px 2px gray inset;
+}
+
+/* Burger Menu */
+
+.smallMenu{
+    @apply absolute bg-gray-300 translate-x-6 translate-y-[40px] xs:translate-y-[52px] text-center transition ease-out duration-200;
+}
+/* .Navlist{
+    @apply sm:p-1 sm:m-1 lg:p-3 lg:m-3 rounded-xl hover:font-bold hover:bg-white hover:text-black hover:scale-105 transition ease-out duration-200;
+} */
+
+.Borderss{
+    border: 2px solid;
+}
+.spacess{
+    width: auto;
+    height: 500px;
+}
+#centertext{
+    font-size: 3rem;
+    text-align: center;
+}
+.notActive{
+    @apply text-gray-500/60 shadow-none;
+}
+.drops{
+    @apply text-black transition duration-500 md:absolute top-full right-0 md:w-44 bg-gray-300 md:shadow-lg md:rounded-b;
+}
+.dropdowns{
+    @apply flex px-3 py-2 transition duration-300 ease-out justify-center font-normal hover:text-gray-200;
+}
+.parent:hover .child {
+    opacity:1;
+    height:auto;
+    overflow:none;
+}
+.child {
+    opacity:0;
+    height: 0;
+    overflow:hidden;
+    transform: translate(30%,0);
+}
+
+
+
+
+/* NCC and ITPEC in Home Page */
+.eduFrames{
+    @apply sm:grid sm:grid-cols-3 py-5 md:py-10 px-2;
+}
+.aboutEdu{
+    @apply sm:col-span-2 pt-1 md:pt-6;
+}
+.eduHeads{
+    @apply py-2 font-bold text-3xl md:text-4xl;
+}
+.eduPhotoCo{
+    @apply hidden sm:inline sm:pt-8 sm:col-span-1;
+}
+.eduPhoto{
+    @apply sm:w-36 lg:w-40 lg:h-40 rounded-full;
+}
+
+
+
+/* Events in Home Page */
+.card{
+    @apply block md:col-span-1 px-2 py-3 transition ease-linear duration-200 hover:scale-95 cursor-pointer;
+}
+.innerCard{
+    @apply bg-white p-3 md:p-4 lg:p-7 rounded;
+}
+
+
+/* NCC Courses cards */
+.courseCard{
+    @apply p-1 md:p-2 bg-primary shadow-lg rounded-md lg:rounded-xl cursor-pointer lg:hover:scale-95;
+}
+.summ{
+    @apply w-full bg-gray-100 text-xl lg:text-2xl justify-center text-center font-bold flex px-2 py-3;
+}
+
+
+/* ITPEC Courses */
+.Ctextbox{
+    @apply text-4xl rounded px-4 py-2;
+}
+.Clogo{
+    @apply text-white w-auto pt-5 px-2;
+}
+.Ctext{
+    @apply py-3 px-4 text-sm md:text-lg;
+}
+
+
+/* Events */
+.EBcards{
+    @apply rounded-md md:rounded-xl shadow-xl cursor-pointer transition ease-out duration-100 hover:scale-95;
+}
+
+
+/* Content Us */
+.conn{
+    @apply hidden md:flex pb-6 rounded-lg justify-center;
+}

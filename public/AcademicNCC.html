@@ -1,0 +1,495 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC Education</title>
+    <link rel="icon" type="image/x-icon" href="../images/MST.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="fixed bottom-0 h-1 xs:h-1.5 bg-red-500 z-0" id="scrollIndicator"></div>
+
+        <!-- Top Button -->
+        <div class="fixed bottom-3 right-3 md:bottom-5 md:right-5 bg-red-700 text-white rounded-md z-10">
+            <button class="p-1 xs:p-2 hidden" onclick="toTop()" id="ToTop">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+                  </svg>
+            </button>
+        </div>
+
+        <!-- Navigations -->
+    <div class="">
+        <div class="fixed w-full z-10">
+            <nav class=""> <!--backdrop-blur-md-->
+                <div class="grid xl:grid-cols-8 sm:grid-cols-5 xxs:grid-cols-2 bg-gray-300 lg:bg-gray-300/60 backdrop-blur-md ">
+                    <div class="flex xl:col-span-3 sm:col-span-2 xxs:col-span-1 pl-3 bg-primary rounded-r-full xl:rounded-none">
+                        <div class="w-10 xs:w-auto pt-[5px] sm:w-auto xs:pt-0 mdl:pt-1">
+                            <img src="../images/M.S.T LOGO.jpg" alt="M.S.T Logo" class="w-[55px] md:w-14 py-1 rounded-full">
+                        </div>
+                        <div class="sm:py-5 sm:mx-1 sm:px-3 xs:pt-5 xxs:pt-4 xs:px-0 mdl:mx-8 text-gray-100">
+                            <h1 class="flex lg:hidden Uni whitespace-nowrap text-lg md:text-2xl sm:inline xs-text[2px] xxs:hidden">M.S.T University</h1>
+                            <h1 class="text-lg mdl:text-[18px] xl:text-2xl font-bold hidden lg:inline md:whitespace-nowrap Uni">Myanmar Skills Technologies</h1>
+                        </div>
+                    </div>
+
+                    <!-- Space lol -->
+                    <div class="lg:col-span-1 bg-primary rounded-r-full hidden xl:inline"></div>
+
+                    <!-- Nav in Large screen -->
+                    <div class="xl:col-span-4 sm:col-span-3 xxs:col-span-1">
+                        <div class="hidden mdl:inline">
+                            <ul class="flex justify-end py-3">
+                                <li class="lists notActive">
+                                    <a href="index.html">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="lists md:relative parent cursor-pointer">
+                                    <a href="" class="flex">
+                                        <span class="parent">Academic</span>
+                                    </a>
+                                    <ul class="child drops">
+                                        <li class="flex px-3 py-3">
+                                            <span class="subHeadtext border-b border-blue-500 font-normal">Courses</span>
+                                        </li>
+                                        <li>
+                                            <a href="AcademicNCC.html" class="dropdowns hover:bg-blue-500">
+                                                NCC Course
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="AcademicITPEC.html" class="dropdowns hover:bg-red-500">
+                                                ITPEC Course
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="lists notActive">
+                                    <a href="events.html">
+                                        <span class="whitespace-nowrap">Events & Blogs</span>
+                                    </a>
+                                </li>
+                                <li class="lists notActive">
+                                    <a href="about.html">
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li class="lists notActive">
+                                    <a href="contact.html">
+                                        <span class="whitespace-nowrap">Contact Us</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+
+
+
+
+                        <!-- Burger Menu -->
+                        <div class="flex mdl:hidden justify-end py-3 px-3 xs:py-4 xs::px-6">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg> -->
+                            <div class="" onclick="showMenu()">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 xs:w-9 transition ease-out duration-300" id="burger">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 xs:w-9 transition ease-out duration-300 hidden" id="cross">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="smallMenu hidden" id="menu">
+                                <ul class="px-9">
+                                    <li class="py-3">
+                                        <a href="">
+                                            <span>Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="AcademicNCC.html">
+                                            <span>NCC Course</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="AcademicITPEC.html">
+                                            <span>ITPEC Course</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="events.html">
+                                            <span>Events & Blogs</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="about.html">
+                                            <span>About</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="contact.html">
+                                            <span>Contact Us</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+
+
+    <!-- Contents -->
+    <main class="pt-14">
+        <!-- Headers -->
+        <div class="p-4 mx-6 border-b-2">
+            <div class="py-6">
+                 <h1 class="Headtext text-center">NCC Education</h1>
+             </div>
+             <div class="py-6">
+                 <h2 class="subHeadtext text-center">NCC Courses</h2>
+             </div> 
+        </div>
+
+         <!-- Courses -->
+        <div class="mx-3 md:mx-4 border-b-2">
+
+            <!-- L3 Course -->
+            <div class="md:border-b-2">
+                <div class="text-center pt-5 pb-10">
+                    <h3 class="text-2xl md:text-4xl ">Level 3</h3>
+                </div>
+
+                <!-- Grid Courses -->
+                <div class="block md:grid md:grid-cols-3">
+
+                    <!-- Grid Cards -->
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Computing</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Business</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Foundation Diploma</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L4 Course -->
+            <div class="md:border-b-2">
+                <div class="text-center pt-5 pb-10">
+                    <h3 class="text-2xl md:text-4xl ">Level 4</h3>
+                </div>
+
+                <!-- Grid Courses -->
+                <div class="block md:grid md:grid-cols-3">
+
+                    <!-- Grid Cards -->
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Computing</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Business</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Business IT</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- L5 Course -->
+            <div class="md:border-b-2">
+                <div class="text-center pt-5 pb-10">
+                    <h3 class="text-2xl md:text-4xl ">Level 5</h3>
+                </div>
+
+                <!-- Grid Courses -->
+                <div class="block md:grid md:grid-cols-4">
+
+                    <!-- Grid Cards -->
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Computing</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Business</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ">Diploma in Business IT</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-1 py-2">
+                        <div class="courseCard">
+                            <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                                <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                    <summary class="summ lg:whitespace-nowrap">Diploma in Cyber Security</summary>
+                                    <p class="px-4 py-3">
+                                    Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- B.Sc Course -->
+        <div class="md:border-b-2">
+            <div class="text-center pt-5 pb-10">
+                <h3 class="text-2xl md:text-4xl ">B.Sc(Hons)</h3>
+            </div>
+
+            <!-- Grid Courses -->
+            <div class="block md:grid md:grid-cols-2">
+
+                <!-- Grid Cards -->
+                <div class="px-1 py-2">
+                    <div class="courseCard">
+                        <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                            <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                <summary class="summ">B.Sc(Hons) Computing & Business</summary>
+                                <p class="px-4 py-3">
+                                Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-1 py-2">
+                    <div class="courseCard">
+                        <div class=" md:col-span-1 bg-white md:rounded-md shadow-xl md:shadow-none md:border-0">
+                            <details class="w-full bg-white border border-blue-500 cursor-pointer">
+                                <summary class="summ">B.Sc(Hons) Cyber Security</summary>
+                                <p class="px-4 py-3">
+                                Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <!-- About NCC Education -->
+        <div class="flex px-7 py-10 ">
+            <div class="md:grid md:grid-cols-5">
+                <div class="md:col-span-2 lg:px-12 py-6 border-b-2 sm:border-0">
+                    <h2 class="text-4xl font-bold">About</h2>
+                    <h2 class="text-4xl font-bold">NCC Education</h2>
+                </div>
+                <div class="md:col-span-3 px-1 py-6 lg:px-16">
+                    <span class="">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis dignissimos similique vitae dolorum aperiam ducimus, recusandae ex aliquam rem? Similique accusantium quasi, quidem quam adipisci atque itaque veritatis maiores quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam commodi nisi perspiciatis ipsam! Corporis voluptatum, impedit necessitatibus tempora facere non est natus reprehenderit sit explicabo obcaecati saepe! Architecto, animi voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit hic dolorum expedita aut doloribus obcaecati, alias, nesciunt eius eligendi ipsam voluptas, animi corporis sunt. Temporibus sequi est sint aperiam veritatis?
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partnerships -->
+        <div class="p-2 md:p-5">
+            <div class="flex p-2 md:p-5">
+                <div class="block md:grid md:grid-cols-5">
+                    <div class="col-span-1 p-5 Borderss">
+                        <p>Partnership(Not Relationship)</p>
+                    </div>
+                    <div class="col-span-1 p-5 Borderss">
+                        <p>Partnership(Not Relationship)</p>
+                    </div>
+                    <div class="col-span-1 p-5 Borderss">
+                        <p>Partnership(Not Relationship)</p>
+                    </div>
+                    <div class="col-span-1 p-5 Borderss">
+                        <p>Partnership(Not Relationship)</p>
+                    </div>
+                    <div class="col-span-1 p-5 Borderss">
+                        <p>Partnership(Not Relationship)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="">
+            <div class="bg-primary border-b-2 text-white">
+                <div class="block md:grid md:grid-cols-2">
+                    <div class="col-span-1 p-2 md:px-4 md:py-4">
+                        <div class="conn">
+                            <img src="../images/cambridge.JPG" alt="" class="w-[450px] rounded-xl">
+                        </div>
+                        <div class="p-5 lg:p-10">
+                            <span class="text-sm md:text-lg">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aliquam magni, alias delectus ad ut, totam facilis inventore eligendi tenetur voluptatum praesentium voluptatem beatae rem non, in eveniet molestias. Ipsam.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-span-1 p-2 md:px-4 md:py-4">
+                        <div class="conn">
+                            <img src="../images/cambridge.JPG" alt="" class="w-[450px] rounded-xl">
+                        </div>
+                        <div class="p-5 lg:p-10">
+                            <span class="text-sm md:text-lg">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aliquam magni, alias delectus ad ut, totam facilis inventore eligendi tenetur voluptatum praesentium voluptatem beatae rem non, in eveniet molestias. Ipsam.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="bg-primary text-white">
+        <p style="text-align: center; font-size: 1.4rem;">M.S.T University</p>
+    </footer>
+
+
+    <script>
+
+
+// Scroll Indicator
+window.addEventListener('scroll', moveScrollIndicator);
+  
+  const scrollIndicatorElt = document.getElementById('scrollIndicator');
+
+  const maxHeight = window.document.body.scrollHeight - window.innerHeight;
+
+  function moveScrollIndicator(e) {
+      const percentage = ((window.scrollY) / maxHeight) * 100;
+
+      scrollIndicatorElt.style.width = percentage + '%';
+  }
+
+  // Click To The Top
+  let TopButton = document.getElementById("ToTop");
+  window.onscroll = function() {scrolls()};
+
+  function scrolls() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      TopButton.style.display = "block";
+      } 
+  else {
+      TopButton.style.display = "none";
+      }
+  }
+  function toTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+
+
+//   Burger menu
+        const menu = document.querySelector('#menu');
+        const burger = document.querySelector('#burger');
+        const cross = document.querySelector('#cross');
+
+        function showMenu(){
+        if(menu.classList.contains('hidden')){
+            menu.classList.remove('hidden');
+            burger.classList.add('hidden');
+            cross.classList.remove('hidden');
+        }
+        else{
+            menu.classList.add('hidden');
+            burger.classList.remove('hidden');
+            cross.classList.add('hidden');
+        }
+        }
+        
+
+    </script>
+</body>
+</html>

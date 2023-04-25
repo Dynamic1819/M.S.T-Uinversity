@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="m-0">
+        <div class="fixed w-full z-10">
+            <nav class=""> <!--backdrop-blur-md-->
+                <div class="grid xl:grid-cols-8 sm:grid-cols-5 xxs:grid-cols-2 bg-gray-300/60 backdrop-blur-md lg:bg-gray-300">
+                    <div class="flex xl:col-span-3 sm:col-span-2 xxs:col-span-1 pl-3 bg-primary rounded-r-full xl:rounded-none">
+                        <div class="w-16 pt-[5px] sm:w-auto xs:pt-0 mdl:pt-1">
+                            <img src="../images/M.S.T LOGO.jpg" alt="M.S.T Logo" class="w-[55px] md:w-14 py-1 rounded-full">
+                        </div>
+                        <div class="sm:py-5 sm:mx-1 sm:px-3 xs:pt-5 xxs:pt-4 xs:px-0 mdl:mx-8 text-gray-100">
+                            <h1 class="flex lg:hidden Uni whitespace-nowrap text-lg md:text-2xl xs:inline xs-text[2px] xxs:hidden">M.S.T University</h1>
+                            <h1 class="text-lg mdl:text-[18px] xl:text-2xl font-bold hidden lg:inline md:whitespace-nowrap Uni">Myanmar Skills Technologies</h1>
+                        </div>
+                    </div>
+
+                    <!-- Space lol -->
+                    <div class="lg:col-span-1 bg-primary rounded-r-full hidden xl:inline"></div>
+
+                    <!-- Nav in Large screen -->
+                    <div class="xl:col-span-4 sm:col-span-3 xxs:col-span-1">
+                        <div class="hidden mdl:inline">
+                            <ul class="flex justify-end py-3">
+                                <li class="lists notActive">
+                                    <a href="index.html">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="lists md:relative parent cursor-pointer">
+                                    <a href="" class="flex">
+                                        <span class="parent">Academic</span>
+                                    </a>
+                                    <ul class="child drops">
+                                        <li class="flex px-3 py-3">
+                                            <span class="subHeadtext border-b border-blue-500 font-normal">Courses</span>
+                                        </li>
+                                        <li>
+                                            <a href="AcademicNCC.html" class="dropdowns hover:bg-blue-500">
+                                                NCC Course
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="AcademicITPEC.html" class="dropdowns hover:bg-red-500">
+                                                ITPEC Course
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="lists notActive">
+                                    <a href="events.html">
+                                        <span class="whitespace-nowrap">Events & Blogs</span>
+                                    </a>
+                                </li>
+                                <li class="lists notActive">
+                                    <a href="about.html">
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li class="lists notActive">
+                                    <a href="contact.html">
+                                        <span class="whitespace-nowrap">Contact Us</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="flex mdl:hidden justify-end py-4 px-6">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg> -->
+                            <div class="" onclick="showMenu()">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 transition ease-out duration-300" id="burger">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 transition ease-out duration-300 hidden" id="cross">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="smallMenu hidden" id="menu">
+                                <ul class="px-9">
+                                    <li class="py-3">
+                                        <a href="index.html">
+                                            <span>Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="AcademicNCC.html">
+                                            <span>NCC Course</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="AcademicITPEC.html">
+                                            <span>ITPEC Course</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="events.html">
+                                            <span>Events & Blogs</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="about.html">
+                                            <span>About</span>
+                                        </a>
+                                    </li>
+                                    <li class="py-3">
+                                        <a href="contact.html">
+                                            <span>Contact Us</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <script>
+
+
+        const menu = document.querySelector('#menu');
+        const burger = document.querySelector('#burger');
+        const cross = document.querySelector('#cross');
+
+        function showMenu(){
+        if(menu.classList.contains('hidden')){
+            menu.classList.remove('hidden');
+            burger.classList.add('hidden');
+            cross.classList.remove('hidden');
+        }
+        else{
+            menu.classList.add('hidden');
+            burger.classList.remove('hidden');
+            cross.classList.add('hidden');
+        }
+        }
+        
+
+
+    </script>
+</body>
+</html>

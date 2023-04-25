@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-[#00398a] text-white p-8">
+        <header class="text-4xl">
+            <span>Uploading Page</span>
+        </header>
+        <form action="" class="md:p-5">
+            <div class="py-3 text-gray-200">
+                <label for="title" class="py-4 text-2xl block">Add Title here</label>
+                <input type="text" id="title" placeholder="Title Name" class="px-3 border-4 rounded-xl h-10 md:w-[300px]">
+            </div>
+            <div class="py-3 text-gray-200">
+                <label for="uploadDate" class="py-4 text-2xl block">Date</label>
+                <input type="date" id="uploadDate" class="px-3 borer-4 rounded-xl h-10 md:w-[300px]">
+            </div>
+            <div class="py-5">
+                <label for="Toggle" class="inline-flex items-center space-x-4 cursor-pointer">
+                    <span class="text-xl">Events</span>
+                    <span class="relative">
+                        <input id="Toggle" type="checkbox" class="hidden peer">
+                        <div class="w-10 h-4 rounded-full shadow bg-gray-600 peer-checked:bg-gray-900"></div>
+                        <div class="absolute left-0 w-6 h-6 rounded-full shadow -inset-y-1 peer-checked:right-0 peer-checked:left-auto bg-gray-400"></div>
+                    </span>
+                    <span class="text-xl">Blogs</span>
+                </label>
+            </div>
+            <div class="font-sans text-gray-900">
+                <div class="py-4 px-3">
+                    <div class=" bg-white sm:rounded-lg sm:shadow-xl block">
+                        <div class="text-center">
+                            <h2 class="text-2xl font-semibold mb-2">Upload your Photo</h2>
+                        </div>
+                        <div class="relative bg-gray-100 rounded-lg shadow-inner">
+                            <input type="file" id="photo-upload" class="hidden">
+                            <label for="photo-upload" class="z-20 py-3 flex flex-col-reverse items-center justify-center cursor-pointer">
+                                <p class="z-10 py-3 text-xs font-light text-center text-gray-500">Drag & Drop your Photo here</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="z-10 w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776">
+                                  </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-3 px-1 text-gray-200">
+                <label for="texts" class="py-4 text-2xl block">Write down your Blogs</label>
+                <textarea name="" id="texts" class="text-sm px-3 border-4 rounded-xl h-96 md:h-72 w-full resize-none text-black"></textarea>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
